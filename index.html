@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo KNRF.jpg" type="image/jpg">
+    <title>Kediri Nite Run Festival 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-[url('/assets/bg-soft-pattern.png')] bg-fixed bg-cover bg-no-repeat">
+
+
+    <!-- Header/Navbar -->
+    <header class="navy-gradient text-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="assets/logo KNRF.jpg" alt="Logo Kediri Nite Run Festival - siluet pelari dengan latar kota Kediri" class="h-12">
+                <h2 class="text-xl md:text-2xl font-bold">Kediri Nite Run Festival</h2>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-blue-200 transition">Beranda</a>
+                <div class="dropdown relative" id="dropdownWrapper">
+                  <button id="dropdownToggle" class="hover:text-blue-200 transition flex items-center">
+                    <span>Informasi</span> <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                  </button>
+                  <div id="dropdownMenu" class="dropdown-menu absolute hidden mt-2 navy-gradient rounded shadow-lg w-48">
+                    <a href="#lokasi" class="block px-4 py-2 hover:bg-blue-800">Lokasi</a>
+                    <a href="#kategori" class="block px-4 py-2 hover:bg-blue-800">Kategori</a>
+                    <a href="#jadwal" class="block px-4 py-2 hover:bg-blue-800">Jadwal</a>
+                    <a href="#peraturan" class="block px-4 py-2 hover:bg-blue-800">Peraturan</a>
+                  </div>
+                </div>
+
+                <a href="#registrasi" class="hover:text-blue-200 transition">Registrasi</a>
+                <a href="#faq" class="hover:text-blue-200 transition">FAQ</a>
+                <a href="https://lynk.id/kedirirunfestival" target="_blank" class="hover:text-blue-200 transition">Kontak</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden navy-gradient pb-4">
+            <div class="container mx-auto px-4 flex flex-col space-y-2">
+                <a href="#home" class="py-2 hover:text-blue-200">Beranda</a>
+                <a href="#lokasi" class="py-2 hover:text-blue-200">Lokasi</a>
+                <a href="#kategori" class="py-2 hover:text-blue-200">Kategori</a>
+                <a href="#jadwal" class="py-2 hover:text-blue-200">Jadwal</a>
+                <a href="#peraturan" class="py-2 hover:text-blue-200">Peraturan</a>
+                <a href="#registrasi" class="py-2 hover:text-blue-200">Registrasi</a>
+                <a href="#faq" class="py-2 hover:text-blue-200">FAQ</a>
+                <a href="https://lynk.id/kedirirunfestival" target="_blank" class="hover:text-blue-200 transition">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-24 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center">
+        <img src="assets/City Marathon Run.jpeg" class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-white">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bolaod mb-4">KEDIRI NITE RUN FESTIVAL</h2>
+                <p class="text-xl md:text-2xl mb-8">Night Run With The Beauty Of Kediri</p>
+                
+                <div class="countdown-box inline-block rounded-lg p-4 mb-8">
+                    <p class="text-lg mb-2">Event Dimulai Dalam:</p>
+                    <div class="flex justify-center space-x-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold" id="days">00</div>
+                            <div class="text-sm">Hari</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold" id="hours">00</div>
+                            <div class="text-sm">Jam</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold" id="minutes">00</div>
+                            <div class="text-sm">Menit</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold" id="seconds">00</div>
+                            <div class="text-sm">Detik</div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="text-center">
+                <a href="#registrasi" class="inline-block bg-blue-950 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
+                    Daftar Sekarang
+                </a>
+              </div>              
+        </div>
+    </section>
+    
+    <!-- Lokasi Section -->
+    <section id="lokasi" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">LOKASI ACARA</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <div class="w-full lg:w-1/2">
+                    <img src="assets/taman tirtayasa.jpg" alt="Peta lokasi start lari di Alun-Alun Kota Kediri dengan markah posisi" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-800">Start & Finish: Taman Tirtayasa Kediri</h3>
+                    <p class="mb-4 text-gray-700">
+                        Kediri Nite Run Festival diselenggarakan di Kota Kediri tepatnya di Taman Tirtayasa Kediri, tidak hanya sekadar ajang lari biasa. Kami membawa pengalaman berlari yang berbeda di malam hari, dengan suasana kelap kelip lampu indah Kota Kediri yang membangkitkan semangat para peserta.
+                    </p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                        <h4 class="font-bold mb-2 text-blue-700">Rute Lomba:</h4>
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li>5K: Rute dengan pemandangan pusat Kota Kediri</li>
+                            <li>10K: Melewati beberapa ruas jalan ikonik dan kawasan bersejarah di Kota Kediri</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/T88sMGADdNmQM1ku6" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        Buka di Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategori Section -->
+    <section id="kategori" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">KATEGORI LOMBA</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Kategori 1 -->
+                <div class="race-category bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                    <img src="assets/kategori1.jpeg" alt="Pelari fun run 5K di suasana santai dengan latar kota" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-800">5K Night Run</h3>
+                        <p class="text-gray-600 mb-4">Cocok untuk running bareng keluarga atau kalian yang masih pemula bingitts </p>
+                        <img src="assets/10k.png" alt="rute 5k"> <br>
+
+                        <div class="flex justify-between items-center">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">
+                                Umum
+                            </span>
+                            <span class="font-bold text-blue-800">Early Bird: Rp 200.000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kategori 2 -->
+                <div class="race-category bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                    <img src="assets/kategori2.jpeg" alt="Pelari serius 10K dengan nomor dada di tengah kerumunan peserta" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-800">10K Night Run</h3>
+                        <p class="text-gray-600 mb-4">Uji ketahanan bagi kamu yang sudah terbiasa mengikuti Event running.</p>
+                        <img src="assets/5k.png" alt="rute 10k"> <br>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">
+                                Umum
+                            </span>
+                            <span class="font-bold text-blue-800">Early Bird: Rp 300.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jadwal Section -->
+    <section id="jadwal" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">JADWAL ACARA</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden text-center">
+                        <thead class="bg-[#003366] text-white">
+                            <tr>
+                                <th class="py-3 px-4">Waktu</th>
+                                <th class="py-3 px-4">Aktivitas</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-blue-50">
+                                <td class="py-4 px-4">05.00 PM</td>
+                                <td class="py-4 px-4 font-semibold">Open Gate & Registration</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50">
+                                <td class="py-4 px-4">06.30 PM</td>
+                                <td class="py-4 px-4 font-semibold">Warming Up</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50">
+                                <td class="py-4 px-4">07.00 PM</td>
+                                <td class="py-4 px-4 font-semibold">10K Race Starts</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50">
+                                <td class="py-4 px-4">07.20 PM</td>
+                                <td class="py-4 px-4 font-semibold">5K Race Starts</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50">
+                                <td class="py-4 px-4">09.00 PM</td>
+                                <td class="py-4 px-4 font-semibold">
+                                    Awarding, Doorprize, Performance,<br/>
+                                    Guest Star & Closing Ceremony
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+   <!-- Registrasi Section -->
+    <section id="registrasi" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">REGISTRASI PESERTA</h2>
+
+        <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden text-center p-8">
+        <p class="text-lg mb-6 text-gray-700">
+            Silakan klik tombol di bawah ini untuk mengisi formulir pendaftaran peserta.
+        </p>
+        <a 
+            href="https://bit.ly/volunteerKRF2025" 
+            target="_blank" 
+            class="inline-block px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition">
+            Daftar Sekarang
+        </a>
+        </div>
+    </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+      <!-- FAQ Section - Kiri (2/3) -->
+      <div class="md:col-span-2 bg-white p-8 rounded-xl shadow">
+        <h2 class="text-3xl font-bold text-center mb-10 text-blue-900">PERTANYAAN UMUM</h2>
+
+        <div class="grid grid-cols-1 gap-4">
+          <!-- FAQ Item 1 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center p-4 focus:outline-none">
+              <h3 class="text-lg font-semibold text-left text-blue-800">Kapan Kediri Nite Run Festival 2025 diselenggarakan?</h3>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-content px-4 pb-4 hidden">
+              <p class="text-gray-700">
+                Acara akan berlangsung pada Sabtu, 06 Desember 2025 dengan open gate pada pukul 05.00 PM.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center p-4 focus:outline-none">
+              <h3 class="text-lg font-semibold text-left text-blue-800">Di mana lokasi start dan finish event ini?</h3>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-content px-4 pb-4 hidden">
+              <p class="text-gray-700">
+                Lokasi start dan finish berada di Taman Tirtayasa Kediri.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center p-4 focus:outline-none">
+              <h3 class="text-lg font-semibold text-left text-blue-800">Siapa saja yang boleh mendaftar?</h3>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-content px-4 pb-4 hidden">
+              <p class="text-gray-700">
+                Acara ini terbuka untuk semua kalangan WNI maupun WNA dengan batasan umur 12 tahun.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center p-4 focus:outline-none">
+              <h3 class="text-lg font-semibold text-left text-blue-800">Apa saja kategori lomba yang tersedia?</h3>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-content px-4 pb-4 hidden">
+              <p class="text-gray-700">
+                Terdapat dua kategori:<br>
+                <li>5K Night Run</li>
+                <li>10K Night Run</li> 
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center p-4 focus:outline-none">
+              <h3 class="text-lg font-semibold text-left text-blue-800">Bagaimana cara mendaftar?</h3>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-content px-4 pb-4 hidden">
+              <p class="text-gray-700">
+                Pendaftaran dilakukan secara online melalui Google Form pada halaman registrasi website ini atau dengan mengisikan formulir pada link berikut: .....
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center p-4 focus:outline-none">
+              <h3 class="text-lg font-semibold text-left text-blue-800">Berapa biaya pendaftaran?</h3>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-content px-4 pb-4 hidden">
+              <p class="text-gray-700">
+                Biaya pendaftaran:<br>
+                <li>5K Night Run: Rp200.000 (Early Bird)</li>
+                <li>10K Night Run: Rp300.000 (Early Bird)</li>
+                Sudah termasuk race pack lengkap.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 7 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center p-4 focus:outline-none">
+              <h3 class="text-lg font-semibold text-left text-blue-800">Apa saja yang didapatkan peserta?</h3>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-content px-4 pb-4 hidden">
+              <p class="text-gray-700">
+                <ul class="list-disc list-inside text-gray-700">
+                  Setiap peserta akan menerima:<br>
+                        <li>Bib Number</li>
+                        <li>Kaos Lari</li>
+                        <li>Goodie Bag</li>
+                        <li>Medali Finisher</li>
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 8 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center p-4 focus:outline-none">
+              <h3 class="text-lg font-semibold text-left text-blue-800">Kapan race pack bisa diambil?</h3>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-content px-4 pb-4 hidden">
+              <p class="text-gray-700">
+                Pengambilan racepack dapat dilakukan pada tanggal 04-05 Desember 2025.<br>
+                Lokasi: Gedung Setyo Santoso
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 9 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center p-4 focus:outline-none">
+              <h3 class="text-lg font-semibold text-left text-blue-800">Apakah tersedia water station di sepanjang rute?</h3>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-content px-4 pb-4 hidden">
+              <p class="text-gray-700">
+                Ya, panitia menyediakan masing-masing 1 (satu) water station dan medis untuk kategori 5K, sedangkan masing-masing 3 (tiga) water station dan medis untuk kategori 10K.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 10 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center p-4 focus:outline-none">
+              <h3 class="text-lg font-semibold text-left text-blue-800">Siapa yang bisa saya hubungi jika ada pertanyaan lebih lanjut?</h3>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-content px-4 pb-4 hidden">
+              <p class="text-gray-700">
+                Silakan hubungi kami melalui:<br>
+                Email: kedirirunfestival@gmail.com<br>
+               WhatsApp:
+                <ul class="list-disc list-inside text-gray-700">
+                  <li>085811465509 (Zaky)</li>
+                  <li>089682986600 (Faizul)</li>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <!-- Informasi Penting - Kanan (1/3) -->
+            <div class="navy-gradient text-white p-8 rounded-xl shadow">
+                <h3 class="text-2xl font-bold mb-6">Informasi Penting</h3>
+                
+                <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                    <i class="fas fa-calendar-check text-blue-300 mr-3"></i>
+                    </div>
+                    <div>
+                    <h4 class="font-semibold">Tanggal Penutupan Pendaftaran</h4>
+                    <p class="text-blue-200">__/__/2025</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                    <i class="fas fa-money-bill-wave text-blue-300 mr-3"></i>
+                    </div>
+                    <div>
+                    <h4 class="font-semibold">Metode Pembayaran</h4>
+                    <p class="text-blue-200">Transfer Bank, E-Wallet (OVO/DANA/GoPay), QRIS</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                    <i class="fas fa-tshirt text-blue-300 mr-3"></i>
+                    </div>
+                    <div>
+                    <h4 class="font-semibold">Yang Didapatkan</h4>
+                    <ul class="list-disc list-inside text-blue-200 pl-1">
+                        <li>Bib Number</li>
+                        <li>Kaos Lari</li>
+                        <li>Goodie Bag</li>
+                        <li>Medali Finisher</li>
+                    </ul>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                    <i class="fas fa-phone-alt text-blue-300 mr-3"></i>
+                    </div>
+                    <div>
+                    <h4 class="font-semibold">Kontak Panitia</h4>
+                    <p class="text-blue-200">
+                        kedirirunfestival@gmail.com<br>
+                        WhatsApp:
+                        <ul class="list-disc list-inside text-blue-200 pl-1">
+                          <li>085811465509 (Zaky)</li>
+                          <li>089682986600 (Faizul)</li>
+                      </ul>
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+    <!-- Sponsor dan partner -->
+    <section id="sponsor" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 md:px-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+            Sponsor & Partnership
+        </h2>
+    
+        <!-- Sponsor Utama -->
+        <div class="mb-16 text-center">
+            <div class="inline-block bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
+            <img src="assets/coming soon.jpeg" alt="Sponsor Utama" class="h-24 mx-auto object-contain">
+            <p class="mt-4 text-lg font-semibold text-blue-900">Sponsor Utama</p>
+            </div>
+        </div>
+
+        <!-- Sponsor Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
+            
+            <!-- Sponsor 1 -->
+            <div class="bg-white p-2 rounded-lg shadow hover:shadow-lg transition">
+            <img src="assets/LOGO AKEO2.jpg" alt="Sponsor 1 Logo" class="h-16 mx-auto object-contain">
+            </div>
+    
+            <!-- Sponsor 2 -->
+            <div class="bg-white p-2 rounded-lg shadow hover:shadow-lg transition">
+            <img src="assets/LOGO GALUH.jpg" alt="Sponsor 2 Logo" class="h-16 mx-auto object-contain">
+            </div>
+    
+            <!-- Sponsor 3 -->
+            <div class="bg-white p-2 rounded-lg shadow hover:shadow-lg transition">
+            <img src="assets/LOGO FITBAR.jpeg" alt="Sponsor 3 Logo" class="h-16 mx-auto object-contain">
+            </div>
+    
+            <!-- Sponsor 4 -->
+            <div class="bg-white p-2 rounded-lg shadow hover:shadow-lg transition">
+            <img src="assets/LOGO HYDRO COCO.jpeg" alt="Sponsor 4 Logo" class="h-16 mx-auto object-contain">
+            </div>
+            
+            <!-- Sponsor 5 -->
+            <div class="bg-white p-2 rounded-lg shadow hover:shadow-lg transition">
+            <img src="assets/coming soon.jpeg" alt="Sponsor 5 Logo" class="h-16 mx-auto object-contain">
+            </div>
+        
+            <!-- Sponsor 6 -->
+            <div class="bg-white p-2 rounded-lg shadow hover:shadow-lg transition">
+           <img src="assets/coming soon.jpeg" alt="Sponsor 6 Logo" class="h-16 mx-auto object-contain">
+            </div>
+        
+            <!-- Sponsor 7 -->
+            <div class="bg-white p-2 rounded-lg shadow hover:shadow-lg transition">
+            <img src="assets/coming soon.jpeg" alt="Sponsor 7 Logo" class="h-16 mx-auto object-contain">
+            </div>
+    
+            <!-- Sponsor 8 -->
+            <div class="bg-white p-2 rounded-lg shadow hover:shadow-lg transition">
+            <img src="assets/coming soon.jpeg" alt="Sponsor 8 Logo" class="h-16 mx-auto object-contain">
+            </div>
+        </div>
+    </section>
+  
+
+ <footer id="footer" class="navy-gradient text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="mb-6 md:mb-0">
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="assets/logo KNRF.jpg" alt="Logo kecil Kediri Run Festival" class="h-10">
+                    <h3 class="text-xl font-bold text-white pt-1">Kediri Nite Run Festival</h3>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-2 text-white">Lokasi</h4>
+                    <p class="text-blue-200">
+                      Taman Tirtayasa, Kota Kediri, Jawa Timur<br>
+                    </p>
+                  </div>
+                  
+            </div>
+            
+            <!-- Hubungi Kami -->
+            <div class="mb-4 pl-1"> <!-- Tambahkan pl-x sesuai kebutuhan -->
+              <p class="text-white mb-1">Hubungi Kami:</p>
+              <p class="text-blue-200 break-words">kedirirunfestival@gmail.com</p>
+
+              <!-- Ikon Sosial Media -->
+              <div class="flex space-x-4 mt-2">
+                <a href="https://www.tiktok.com/@kedirirunfestival" class="text-2xl text-blue-200 hover:text-white">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.instagram.com/kedirirunfestival" class="text-2xl text-blue-200 hover:text-white">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://lynk.id/kedirirunfestival" class="text-2xl text-blue-200 hover:text-white">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+              
+            </div>
+            
+        </div>
+        
+        <div class="border-t border-blue-800 mt-8 pt-6 text-center text-blue-300">
+            <p>© 2025 Kediri Nite Run Festival. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Import js -->
+    <script src="script.js"></script>    
+
+    
+</body>
+</html>
+

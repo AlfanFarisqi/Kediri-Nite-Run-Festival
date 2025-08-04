@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+        
+.navy-gradient {
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+}
+        
+.countdown-box {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+        
+.race-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+        
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
